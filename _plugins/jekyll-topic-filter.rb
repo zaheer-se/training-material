@@ -63,6 +63,7 @@ module Jekyll
         page_obj = page.data.dup
         page_obj['slides'] = true
         page_obj['type'] = 'introduction'
+        page_obj['url'] = page.url
         resource_intro.push(page_obj)
       end
 
@@ -108,6 +109,7 @@ module Jekyll
 
         # Otherwise clone the metadata from it which works well enough.
         page_obj = page.data.dup
+        page_obj['url'] = page.url
 
         # Sometimes `hands_on` is set to something like `external`, in which
         # case it is important to not override it. So we only do that if the
@@ -116,6 +118,7 @@ module Jekyll
         # is hard to follow which keys are which and safer to test for both in
         # case someone edits the code later. If either of these exist, we can
         # automatically set `hands_on: true`
+        puts ".... #{page_obj['url']}"
         if not page_obj.has_key?("hands_on") then
           page_obj['hands_on'] = resources.include?('tutorial.md') or resources.include?('tutorial.html')
         end

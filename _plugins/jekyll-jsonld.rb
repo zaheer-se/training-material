@@ -22,10 +22,11 @@ module Jekyll
         },
         "interactivityType": "mixed",
         "isAccessibleForFree": true,
-        # TODO
+        # TODO(hxr): fix
         "license": "https://github.com/galaxyproject/training-material/blob/master/LICENSE.md",
         "learningResourceType": "#{material['type']}",
-        "url": "#{material['url']}",
+        # TODO(hxr): fix
+        "url": "https://galaxyproject.github.io/training-material#{material['url']}",
       }
 
       # Zenodo links
