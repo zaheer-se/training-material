@@ -27,6 +27,7 @@ module Jekyll
         "learningResourceType": "#{material['type']}",
         # TODO(hxr): fix
         "url": "https://galaxyproject.github.io/training-material#{material['url']}",
+        "@id": "https://galaxyproject.github.io/training-material#{material['url']}",
       }
 
       # Zenodo links
@@ -34,6 +35,7 @@ module Jekyll
       if material.key?('zenodo_link') then
         mentions = mentions.push({
           "@type": "Thing",
+          "@id": "#{material['zenodo_link']}",
           "url": "#{material['zenodo_link']}",
           "name": "Training data for #{material['title']} tutorial"
         })
@@ -44,6 +46,7 @@ module Jekyll
         mentions = mentions.push({
           "@type": "Thing",
           # TODO
+          "@id": "https://github.com/galaxyproject/training-material/tree/master/topics/#{material['topic_name']}/tutorials/#{material['tutorial_name']}/workflows/",
           "url": "https://github.com/galaxyproject/training-material/tree/master/topics/#{material['topic_name']}/tutorials/#{material['tutorial_name']}/workflows/",
           "name": "Workflow for #{material['title']} tutorial"
         })
@@ -96,6 +99,7 @@ module Jekyll
           if material.key?('slides') then
             slide_part = {
               "@type": "CreativeWork",
+              "@id": "https://github.com/galaxyproject/training-material/tree/master/topics/#{material['topic_name']}/tutorials/#{material['tutorial_name']}/tours/",
               "url": "https://github.com/galaxyproject/training-material/tree/master/topics/#{material['topic_name']}/tutorials/#{material['tutorial_name']}/tours/",
               "name": "Slides for #{material['title']}",
               "learningResourceType": "slides",
@@ -107,6 +111,7 @@ module Jekyll
           if material.key?('galaxy_tour') then
             tour_part = {
               "@type": "CreativeWork",
+              "@id": "https://github.com/galaxyproject/training-material/tree/master/topics/#{material['topic_name']}/tutorials/#{material['tutorial_name']}/tours/",
               "url": "https://github.com/galaxyproject/training-material/tree/master/topics/#{material['topic_name']}/tutorials/#{material['tutorial_name']}/tours/",
               "name": "Galaxy Tour for #{material['title']}",
               "interactivityType": "active",
