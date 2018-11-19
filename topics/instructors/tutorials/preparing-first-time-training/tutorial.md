@@ -1,7 +1,7 @@
 ---
 layout: tutorial_hands_on
 
-title: Giving training on a new topic for the first time
+title: Preparing to give training on a new topic for the first time
 time_estimation: 10m
 questions:
   - What should I do to prepare for giving a training?
