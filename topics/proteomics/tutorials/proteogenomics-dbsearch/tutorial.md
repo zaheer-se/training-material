@@ -69,7 +69,7 @@ In this tutorial, we perform proteogenomic database searching using the Mass Spe
 > 3. Rename the datasets to something more recognizable (strip the URL prefix)
 > 4. Build a **Dataset list** for the three MGF files, name it something recognizable, for example *MGF files*
 >
->    {% include snippets/build_list_collection.md %}
+>    {% include snippets/build_dataset_list.md %}
 >
 {: .hands_on}
 
