@@ -1,3 +1,12 @@
+<!--
+type: tip box
+location: inside a box
+arguments:
+    required:
+        name: name of the reference build
+        dbkey: dbkey of the reference 
+        fasta: fasta file for the reference
+-->
 >
 >    > ### {% icon tip %} Tip: Adding a custom Database/Build (dbkey)
 >    > - In the top menu bar, go to the *User*, and select *Custom Builds*
