@@ -7,6 +7,7 @@ questions:
 objectives:
 time_estimation: "2H"
 key_points:
+enable: false
 contributors:
   - nekrut
   - joachimwolff
