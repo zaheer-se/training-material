@@ -42,6 +42,7 @@ layout: true
 class: center, middle, inverse
 
 <div class="my-header"><span>
+<a class="visually-hidden tabbable" href="slides-plain.html">View the plain-text slides without JS</a>
 <a href="{{ site.baseurl }}/topics/{{ topic.name }}" title="Return to topic page" ><i class="fa fa-level-up" aria-hidden="true"></i></a>
 {% if page.type == "introduction" %}
   {% capture link %}{{ site.github_repository }}/edit/{{ site.github_repository_branch }}/topics/{{ topic.name }}/slides/{{ page.tutorial_name }}.html{% endcapture %}

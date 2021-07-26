@@ -436,6 +436,16 @@ blockquote {
     position: absolute;
     width: 1px;
 }
+.visually-hidden.tabbable:hover, .visually-hidden.tabbable:focus {
+	clip: revert;
+	overflow: revert;
+	background: white;
+	color: black;
+	width: revert;
+	height: revert;
+	margin:revert;
+	border: 1px solid black;
+}
 
 .contributors-line {
     color: $gray;
