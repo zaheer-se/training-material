@@ -143,6 +143,7 @@ div#theme-selector,div#lang-selector,div#archive-selector {
 }
 
 @import "assets/css/themes.scss";
+@import "assets/css/slides.scss";
 
 h1,
 h2,
@@ -740,6 +741,7 @@ nav[data-toggle='toc'] {
         height: 1.25em;
         border-radius: 50%;
         margin: 0.25em;
+        vertical-align: middle;
     }
 }
 

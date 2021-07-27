@@ -1,3 +1,10 @@
+@mixin rainbow-gradient() {
+    background: linear-gradient(to bottom,#e2453c 0,#e2453c 16%,#e07e39 16%,#e07e39 32%,#e5d667 32%,#e5d667 48%,#51b95b 48%,#51b95b 66%,#1e72b7 66%,#1e72b7 86%,#6f5ba7 86%) no-repeat !important;
+}
+@mixin progress-gradient() {
+    background: linear-gradient(to bottom,#100f0d 0,#100f0d 9%,#a05a2e 9%,#a05a2e 18%,#5eb9da 18%,#5eb9da 27%,#f255ad 27%,#f255ad 36%,#f4f6f5 36%,#f4f6f5 45%,#e21b2c 45%,#e21b2c 54%,#f68824 54%,#f68824 63%,#f4ec1a 63%,#f4ec1a 72%,#26824a 72%,#26824a 81%,#244a8e 81%,#244a8e 90%,#433476 90%) no-repeat !important;
+}
+
 @mixin navbar-light() {
     .navbar-brand, .navbar-dark .navbar-nav .nav-link {
         color: black;
@@ -242,7 +249,7 @@ body.theme-rainbow {
     }
     header {
         nav.navbar {
-            background: linear-gradient(to bottom,#e2453c 0,#e2453c 16%,#e07e39 16%,#e07e39 32%,#e5d667 32%,#e5d667 48%,#51b95b 48%,#51b95b 66%,#1e72b7 66%,#1e72b7 86%,#6f5ba7 86%) no-repeat !important;
+            @include rainbow-gradient();
             padding: 0;
         }
 
@@ -285,7 +292,7 @@ body.theme-progress {
     }
     header {
         nav.navbar {
-            background: linear-gradient(to bottom,#100f0d 0,#100f0d 9%,#a05a2e 9%,#a05a2e 18%,#5eb9da 18%,#5eb9da 27%,#f255ad 27%,#f255ad 36%,#f4f6f5 36%,#f4f6f5 45%,#e21b2c 45%,#e21b2c 54%,#f68824 54%,#f68824 63%,#f4ec1a 63%,#f4ec1a 72%,#26824a 72%,#26824a 81%,#244a8e 81%,#244a8e 90%,#433476 90%) no-repeat !important;
+            @include progress-gradient();
             padding: 0;
         }
 
