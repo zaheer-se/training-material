@@ -3,9 +3,9 @@ layout: tutorial_hands_on
 
 title: Introduction to Python
 level: Introductory
-zenodo_link: ""
-requirements: ""
-follow_up_training:""
+zenodo_link: https://zenodo.org/record/3477564
+requirements: []
+follow_up_training: []
 
 questions:
 - How can I run Python programs using Galaxy?
@@ -17,11 +17,8 @@ objectives:
 - Learn the fundamentals of programming in Python
 - Use the scientific libraries pandas, numpy and matplolib to explore tabular datasets
 
-time_estimation: ""
-key_points:""
-
-supporting_material:
-- [Dataset](https://zenodo.org/record/3477564/files/annotatedDEgenes.tabular)
+time_estimation: 8H
+key_points: []
 
 subtopic: python
 contributors:
@@ -31,11 +28,11 @@ contributors:
 
 # Introduction
 
-## Comment 
-This tutorial is significantly based on the Carpentries courses [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/) and [Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/). 
+## Comment
+This tutorial is significantly based on the Carpentries courses [Programming with Python](https://swcarpentry.github.io/python-novice-inflammation/) and [Plotting and Programming in Python](https://swcarpentry.github.io/python-novice-gapminder/).
 
 ## Overview
-In this lesson, we will be using Python 3 with some of its most popular scientific libraries. We will be using JupyterNotebook, a Python interpreter that comes with everything we need for the lesson. 
+In this lesson, we will be using Python 3 with some of its most popular scientific libraries. We will be using JupyterNotebook, a Python interpreter that comes with everything we need for the lesson.
 
 Python was developed by Guido van Rossum. Guido van Rossum started implementing Python in 1989. Python is a very simple programming language so even if you are new to programming, you can learn python without facing any issues.
 
@@ -50,7 +47,7 @@ Features of Python language:
 
 5. **Large standard library**: Python comes with a large standard library that has some handy codes and functions which we can use while writing code in Python.
 
-6. **Free**: Python is free to download and use. This means you can download it for free and use it in your application. 
+6. **Free**: Python is free to download and use. This means you can download it for free and use it in your application.
 
 7. **Supports exception handling**: Python supports exception handling which means we can write less error prone code and can test various scenarios that can cause an exception later on.
 
@@ -59,7 +56,7 @@ Features of Python language:
 
 # Launch Jupyter in Galaxy
 
-JupyterLab is a User Interface including notebooks. A user can open several notebooks or files as tabs in the same window, like an IDE. JupyterNotebook is a web-based interactive computational environment for creating Jupyter notebook documents. It supports several languages like Python (IPython), Julia, R etc. and is largely used for data analysis, data visualization and further interactive, exploratory computing. 
+JupyterLab is a User Interface including notebooks. A user can open several notebooks or files as tabs in the same window, like an IDE. JupyterNotebook is a web-based interactive computational environment for creating Jupyter notebook documents. It supports several languages like Python (IPython), Julia, R etc. and is largely used for data analysis, data visualization and further interactive, exploratory computing.
 
 JupyterNotebook has several advantages:
 
@@ -70,24 +67,24 @@ JupyterNotebook has several advantages:
 
 Each notebook contains one or more cells that contain code, text, or images. Each notebook can be exported (File, Export as, Executable script) as Python script that can be run from the command line.
 
-We will be using JupyterNotebook in Galaxy and as a result you need to frequently save the notebook in the workspace. This is both for good practice and to protect you in case you accidentally close the browser. Your environment will still run, so it will contain the last saved notebook you have.  Furthermore, you need to download a notebook, before you delete or close a notebook in your history or you will lose it. 
+We will be using JupyterNotebook in Galaxy and as a result you need to frequently save the notebook in the workspace. This is both for good practice and to protect you in case you accidentally close the browser. Your environment will still run, so it will contain the last saved notebook you have.  Furthermore, you need to download a notebook, before you delete or close a notebook in your history or you will lose it.
 
-Alternatively, you can download Anaconda, that includes JupyterNotebook, following the instructions of the [Anaconda installation page](https://docs.anaconda.com/anaconda/install/) for various operating systems.  
+Alternatively, you can download Anaconda, that includes JupyterNotebook, following the instructions of the [Anaconda installation page](https://docs.anaconda.com/anaconda/install/) for various operating systems.
 
 ### Hands-on: Launching Jupyter and Creating a notebook
 
 This section describes the steps to launch JupyterLab using Galaxy and is based on the corresponding part of the [Trajectory Analysis using Python (Jupyter Notebook) in Galaxy](https://training.galaxyproject.org/training-material/topics/transcriptomics/tutorials/scrna-JUPYTER-trajectories/tutorial.html) course. Please note: this is only currently available on the [usegalaxy.eu](https://usegalaxy.eu/) and [usegalaxy.org](https://usegalaxy.org/) sites.
 
-1. Type "Interactive Jupyter Notebook Tool" in the tools search bar.  
+1. Type "Interactive Jupyter Notebook Tool" in the tools search bar.
 2. With the default parameters, press Execute.
 ![Figure1_Launch_Jupyter_Notebook](../../images/python-basics/Figure1_Launch_Jupyter_Notebook.png)
 3. Click on the blue User menu, or go to the top of the screen and choose User and then Active InteractiveTools.
-4. Click on the newest Jupyter Interactive Tool. This will launch the Jupyter Lab interface in a new Tab. 
+4. Click on the newest Jupyter Interactive Tool. This will launch the Jupyter Lab interface in a new Tab.
 ![Figure2_Jupyter_Lab](../../images/python-basics/Figure2_Jupyter_Lab.png)
-6. Click on the Python3 icon under the Notebook section. 
-![Figure3_Python3_icon](../../images/python-basics/Figure3_Python3_icon.png)  
+6. Click on the Python3 icon under the Notebook section.
+![Figure3_Python3_icon](../../images/python-basics/Figure3_Python3_icon.png)
 7. A new jupyter notebook is ready and you can continue with the rest of this tutorial.
-![Figure4_New_Untitled_Notebook](../../images/python-basics/Figure4_New_Untitled_Notebook.png) 
+![Figure4_New_Untitled_Notebook](../../images/python-basics/Figure4_New_Untitled_Notebook.png)
 8. Save your file (Click File, then Save, or click the Save icon at the top left).
 9. Click on the file in the folder window at the left and rename your file whateveryoulike.ipynb
 
@@ -112,7 +109,7 @@ This is great but not very interesting. To do anything useful with data, we need
 weight_kg = 60
 ```
 
-From now on, whenever we use `weight_kg`, Python will substitute the value we assigned to it. 
+From now on, whenever we use `weight_kg`, Python will substitute the value we assigned to it.
 
 In Python, variable names:
 
@@ -639,7 +636,7 @@ print(str(1) + '2')
    num_subjects = 600
    num_per_survey = 42
    num_surveys = (num_subjects - 1) // num_per_survey + 1
-   
+
    print(num_subjects, 'subjects,', num_per_survey, 'per survey:', num_surveys)
    ```
 
@@ -656,7 +653,7 @@ print(str(1) + '2')
 	3
 	```
 4. Answer: 1 and 4
-5. 	1. Standard mathematics treatments typically use i to denote an imaginary number. However, from media reports it was an early convention established from electrical engineering that now presents a technically expensive area to change. 
+5. 	1. Standard mathematics treatments typically use i to denote an imaginary number. However, from media reports it was an early convention established from electrical engineering that now presents a technically expensive area to change.
 	2. `(4+2j)`
 	3. `4j` and Syntax Error: invalid syntax. In the latter cases, `j` is considered a variable and the statement depends on if `j` is defined and if so, its assigned value.
 
@@ -775,7 +772,7 @@ round(3.712, 1)
 Methods have parentheses like functions, but come after the variable. Some methods are used for internal Python operations, and are marked with double underlines.
 
 ```python
-my_string = 'Hello world!'  # creation of a string object 
+my_string = 'Hello world!'  # creation of a string object
 
 print(len(my_string))       # the len function takes a string as an argument and returns the length of the string
 
@@ -813,7 +810,7 @@ Help on built-in function round in module builtins:
 
 round(number, ndigits=None)
     Round a number to a given precision in decimal digits.
-    
+
     The return value is an integer if ndigits is omitted or None.  Otherwise
     the return value has the same type as the number.  ndigits may be negative.
 ```
@@ -932,7 +929,7 @@ at least one test is true
 2. ```python
    a = 5
    b = 5.1
-   
+
    if abs(a - b) <= 0.1 * abs(b):
        print('True')
    else:
@@ -943,7 +940,7 @@ at least one test is true
 
 ## For loops
 
-Doing calculations on the values in a list one by one is very time consuming. 
+Doing calculations on the values in a list one by one is very time consuming.
 
 ```python
 odds = [1, 3, 5, 7, 9, 11]
@@ -1177,7 +1174,7 @@ while odds[i] < 6:
   if odds[i] == 3:
     continue
   print(odds[i])
-  
+
 ```
 ```Output
 5
@@ -1316,15 +1313,15 @@ a: 1 b: 2 c: 77
    ```python
    f = 0
    k = 0
-   
+
    def f2k(f):
        k = ((f - 32) * (5.0 / 9.0)) + 273.15
        return k
-   
+
    print(f2k(8))
    print(f2k(41))
    print(f2k(32))
-   
+
    print(k)
    ```
 
@@ -1460,7 +1457,7 @@ print('middle value in data:', random_data[25, 35])
 middle value in data: 11
 ```
 
-The expression random_data[25, 35] accesses the element at row 25, column 35. While this expression may not surprise you, random_data[0, 0] might. Programming languages like Fortran, MATLAB and R start counting at 1 because that’s what human beings have done for thousands of years. Languages in the C family (including C++, Java, Perl, and Python) count from 0 because it represents an offset from the first value in the array (the second value is offset by one index from the first value). As a result, if we have an M×N array in Python, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second. 
+The expression random_data[25, 35] accesses the element at row 25, column 35. While this expression may not surprise you, random_data[0, 0] might. Programming languages like Fortran, MATLAB and R start counting at 1 because that’s what human beings have done for thousands of years. Languages in the C family (including C++, Java, Perl, and Python) count from 0 because it represents an offset from the first value in the array (the second value is offset by one index from the first value). As a result, if we have an M×N array in Python, its indices go from 0 to M-1 on the first axis and 0 to N-1 on the second.
 
 Slicing data
 An index like [25, 35] selects a single element of an array, but we can select whole sections as well, using slicing the same way as previously with the strings. For example, we can select the first ten days (columns) of values for the first four patients (rows) like this:
@@ -1625,7 +1622,7 @@ print(a)
 ```Output
 [[ 1.  2.  3.]
  [ 0.  3. nan]]
- 
+
 [[1. 2. 3.]
  [0. 3. 0.]]
 ```
@@ -1677,7 +1674,7 @@ There are many ways to create a pandas dataframe. For example you can use a nump
 data = np.array([['','Col1','Col2'],
                 ['Row1',1,2],
                 ['Row2',3,4]])
-                
+
 print(pd.DataFrame(data=data[1:,1:],
                   index=data[1:,0],
                   columns=data[0,1:]))
@@ -1699,43 +1696,43 @@ print(data)
 ```
 ```output
           GeneID     Base mean  log2(FC)    StdErr  Wald-Stats        P-value  \
-0    FBgn0039155   1086.974295 -4.148450  0.134949  -30.740913  1.617357e-207   
-1    FBgn0003360   6409.577128 -2.999777  0.104345  -28.748637  9.419922e-182   
-2    FBgn0026562  65114.840564 -2.380164  0.084327  -28.225437  2.850430e-175   
-3    FBgn0025111   2192.322369  2.699939  0.097945   27.565978  2.847517e-167   
-4    FBgn0029167   5430.067277 -2.105062  0.092547  -22.745964  1.573284e-114   
-..           ...           ...       ...       ...         ...            ...   
-125  FBgn0035710     26.161771  1.048979  0.232922    4.503559   6.682473e-06   
-126  FBgn0035523     70.998197  1.004819  0.223763    4.490561   7.103599e-06   
-127  FBgn0038261     44.270577  1.006264  0.224124    4.489756   7.130487e-06   
-128  FBgn0039178     23.550056  1.040917  0.232626    4.474631   7.654328e-06   
-129  FBgn0034636     24.770519 -1.028531  0.232168   -4.430118   9.418135e-06   
+0    FBgn0039155   1086.974295 -4.148450  0.134949  -30.740913  1.617357e-207
+1    FBgn0003360   6409.577128 -2.999777  0.104345  -28.748637  9.419922e-182
+2    FBgn0026562  65114.840564 -2.380164  0.084327  -28.225437  2.850430e-175
+3    FBgn0025111   2192.322369  2.699939  0.097945   27.565978  2.847517e-167
+4    FBgn0029167   5430.067277 -2.105062  0.092547  -22.745964  1.573284e-114
+..           ...           ...       ...       ...         ...            ...
+125  FBgn0035710     26.161771  1.048979  0.232922    4.503559   6.682473e-06
+126  FBgn0035523     70.998197  1.004819  0.223763    4.490561   7.103599e-06
+127  FBgn0038261     44.270577  1.006264  0.224124    4.489756   7.130487e-06
+128  FBgn0039178     23.550056  1.040917  0.232626    4.474631   7.654328e-06
+129  FBgn0034636     24.770519 -1.028531  0.232168   -4.430118   9.418135e-06
 
              P-adj Chromosome     Start       End Strand         Feature  \
-0    1.387207e-203      chr3R  24141394  24147490      +  protein_coding   
-1    4.039734e-178       chrX  10780892  10786958      -  protein_coding   
-2    8.149380e-172      chr3R  26869237  26871995      -  protein_coding   
-3    6.105789e-164       chrX  10778953  10786907      -  protein_coding   
-4    2.698811e-111      chr3L  13846053  13860001      +  protein_coding   
-..             ...        ...       ...       ...    ...             ...   
-125   1.436480e-04      chr3L   6689326   6703521      -  protein_coding   
-126   1.523189e-04      chr3L   4277961   4281585      +  protein_coding   
-127   1.525142e-04      chr3R  14798985  14801163      +  protein_coding   
-128   1.629061e-04      chr3R  24283954  24288617      +  protein_coding   
-129   1.951192e-04      chr2R  21560245  21576035      -  protein_coding   
+0    1.387207e-203      chr3R  24141394  24147490      +  protein_coding
+1    4.039734e-178       chrX  10780892  10786958      -  protein_coding
+2    8.149380e-172      chr3R  26869237  26871995      -  protein_coding
+3    6.105789e-164       chrX  10778953  10786907      -  protein_coding
+4    2.698811e-111      chr3L  13846053  13860001      +  protein_coding
+..             ...        ...       ...       ...    ...             ...
+125   1.436480e-04      chr3L   6689326   6703521      -  protein_coding
+126   1.523189e-04      chr3L   4277961   4281585      +  protein_coding
+127   1.525142e-04      chr3R  14798985  14801163      +  protein_coding
+128   1.629061e-04      chr3R  24283954  24288617      +  protein_coding
+129   1.951192e-04      chr2R  21560245  21576035      -  protein_coding
 
-       Gene name  
-0           Kal1  
-1           sesB  
-2    BM-40-SPARC  
-3           Ant2  
-4            Hml  
-..           ...  
-125       SP1173  
-126       CG1311  
-127      CG14856  
-128       CG6356  
-129      CG10440  
+       Gene name
+0           Kal1
+1           sesB
+2    BM-40-SPARC
+3           Ant2
+4            Hml
+..           ...
+125       SP1173
+126       CG1311
+127      CG14856
+128       CG6356
+129      CG10440
 
 [130 rows x 13 columns]
 ```
@@ -1753,46 +1750,46 @@ print(data)
 ```
 ```output
                 Base mean  log2(FC)    StdErr  Wald-Stats        P-value  \
-GeneID                                                                     
-FBgn0039155   1086.974295 -4.148450  0.134949  -30.740913  1.617357e-207   
-FBgn0003360   6409.577128 -2.999777  0.104345  -28.748637  9.419922e-182   
-FBgn0026562  65114.840564 -2.380164  0.084327  -28.225437  2.850430e-175   
-FBgn0025111   2192.322369  2.699939  0.097945   27.565978  2.847517e-167   
-FBgn0029167   5430.067277 -2.105062  0.092547  -22.745964  1.573284e-114   
-...                   ...       ...       ...         ...            ...   
-FBgn0035710     26.161771  1.048979  0.232922    4.503559   6.682473e-06   
-FBgn0035523     70.998197  1.004819  0.223763    4.490561   7.103599e-06   
-FBgn0038261     44.270577  1.006264  0.224124    4.489756   7.130487e-06   
-FBgn0039178     23.550056  1.040917  0.232626    4.474631   7.654328e-06   
-FBgn0034636     24.770519 -1.028531  0.232168   -4.430118   9.418135e-06   
+GeneID
+FBgn0039155   1086.974295 -4.148450  0.134949  -30.740913  1.617357e-207
+FBgn0003360   6409.577128 -2.999777  0.104345  -28.748637  9.419922e-182
+FBgn0026562  65114.840564 -2.380164  0.084327  -28.225437  2.850430e-175
+FBgn0025111   2192.322369  2.699939  0.097945   27.565978  2.847517e-167
+FBgn0029167   5430.067277 -2.105062  0.092547  -22.745964  1.573284e-114
+...                   ...       ...       ...         ...            ...
+FBgn0035710     26.161771  1.048979  0.232922    4.503559   6.682473e-06
+FBgn0035523     70.998197  1.004819  0.223763    4.490561   7.103599e-06
+FBgn0038261     44.270577  1.006264  0.224124    4.489756   7.130487e-06
+FBgn0039178     23.550056  1.040917  0.232626    4.474631   7.654328e-06
+FBgn0034636     24.770519 -1.028531  0.232168   -4.430118   9.418135e-06
 
                      P-adj Chromosome     Start       End Strand  \
-GeneID                                                             
-FBgn0039155  1.387207e-203      chr3R  24141394  24147490      +   
-FBgn0003360  4.039734e-178       chrX  10780892  10786958      -   
-FBgn0026562  8.149380e-172      chr3R  26869237  26871995      -   
-FBgn0025111  6.105789e-164       chrX  10778953  10786907      -   
-FBgn0029167  2.698811e-111      chr3L  13846053  13860001      +   
-...                    ...        ...       ...       ...    ...   
-FBgn0035710   1.436480e-04      chr3L   6689326   6703521      -   
-FBgn0035523   1.523189e-04      chr3L   4277961   4281585      +   
-FBgn0038261   1.525142e-04      chr3R  14798985  14801163      +   
-FBgn0039178   1.629061e-04      chr3R  24283954  24288617      +   
-FBgn0034636   1.951192e-04      chr2R  21560245  21576035      -   
+GeneID
+FBgn0039155  1.387207e-203      chr3R  24141394  24147490      +
+FBgn0003360  4.039734e-178       chrX  10780892  10786958      -
+FBgn0026562  8.149380e-172      chr3R  26869237  26871995      -
+FBgn0025111  6.105789e-164       chrX  10778953  10786907      -
+FBgn0029167  2.698811e-111      chr3L  13846053  13860001      +
+...                    ...        ...       ...       ...    ...
+FBgn0035710   1.436480e-04      chr3L   6689326   6703521      -
+FBgn0035523   1.523189e-04      chr3L   4277961   4281585      +
+FBgn0038261   1.525142e-04      chr3R  14798985  14801163      +
+FBgn0039178   1.629061e-04      chr3R  24283954  24288617      +
+FBgn0034636   1.951192e-04      chr2R  21560245  21576035      -
 
-                    Feature    Gene name  
-GeneID                                    
-FBgn0039155  protein_coding         Kal1  
-FBgn0003360  protein_coding         sesB  
-FBgn0026562  protein_coding  BM-40-SPARC  
-FBgn0025111  protein_coding         Ant2  
-FBgn0029167  protein_coding          Hml  
-...                     ...          ...  
-FBgn0035710  protein_coding       SP1173  
-FBgn0035523  protein_coding       CG1311  
-FBgn0038261  protein_coding      CG14856  
-FBgn0039178  protein_coding       CG6356  
-FBgn0034636  protein_coding      CG10440  
+                    Feature    Gene name
+GeneID
+FBgn0039155  protein_coding         Kal1
+FBgn0003360  protein_coding         sesB
+FBgn0026562  protein_coding  BM-40-SPARC
+FBgn0025111  protein_coding         Ant2
+FBgn0029167  protein_coding          Hml
+...                     ...          ...
+FBgn0035710  protein_coding       SP1173
+FBgn0035523  protein_coding       CG1311
+FBgn0038261  protein_coding      CG14856
+FBgn0039178  protein_coding       CG6356
+FBgn0034636  protein_coding      CG10440
 
 [130 rows x 12 columns]
 ```
@@ -1806,20 +1803,20 @@ data.info()
 <class 'pandas.core.frame.DataFrame'>
 Index: 130 entries, FBgn0039155 to FBgn0034636
 Data columns (total 12 columns):
- #   Column      Non-Null Count  Dtype  
----  ------      --------------  -----  
+ #   Column      Non-Null Count  Dtype
+---  ------      --------------  -----
  0   Base mean   130 non-null    float64
  1   log2(FC)    130 non-null    float64
  2   StdErr      130 non-null    float64
  3   Wald-Stats  130 non-null    float64
  4   P-value     130 non-null    float64
  5   P-adj       130 non-null    float64
- 6   Chromosome  130 non-null    object 
- 7   Start       130 non-null    int64  
- 8   End         130 non-null    int64  
- 9   Strand      130 non-null    object 
- 10  Feature     130 non-null    object 
- 11  Gene name   130 non-null    object 
+ 6   Chromosome  130 non-null    object
+ 7   Start       130 non-null    int64
+ 8   End         130 non-null    int64
+ 9   Strand      130 non-null    object
+ 10  Feature     130 non-null    object
+ 11  Gene name   130 non-null    object
 dtypes: float64(6), int64(2), object(4)
 memory usage: 13.2+ KB
 ```
@@ -1835,7 +1832,7 @@ Note that this is an attribute, not a method. (It doesn’t have parentheses.) C
 print(data.columns)
 ```
 ```output
-Index(['Base mean', 'log2(FC)', 'StdErr', 'Wald-Stats', 'P-value', 
+Index(['Base mean', 'log2(FC)', 'StdErr', 'Wald-Stats', 'P-value',
 	   'P-adj', 'Chromosome', 'Start', 'End', 'Strand', 'Feature', 'Gene name'],
       dtype='object')
 ```
@@ -1848,74 +1845,74 @@ print(data.T)
 ```
 ```output
 GeneID         FBgn0039155     FBgn0003360     FBgn0026562     FBgn0025111  \
-Base mean      1086.974295     6409.577128    65114.840564     2192.322369   
-log2(FC)          -4.14845       -2.999777       -2.380164        2.699939   
-StdErr            0.134949        0.104345        0.084327        0.097945   
-Wald-Stats      -30.740913      -28.748637      -28.225437       27.565978   
-P-value                0.0             0.0             0.0             0.0   
-P-adj                  0.0             0.0             0.0             0.0   
-Chromosome           chr3R            chrX           chr3R            chrX   
-Start             24141394        10780892        26869237        10778953   
-End               24147490        10786958        26871995        10786907   
-Strand                   +               -               -               -   
-Feature     protein_coding  protein_coding  protein_coding  protein_coding   
-Gene name             Kal1            sesB     BM-40-SPARC            Ant2   
+Base mean      1086.974295     6409.577128    65114.840564     2192.322369
+log2(FC)          -4.14845       -2.999777       -2.380164        2.699939
+StdErr            0.134949        0.104345        0.084327        0.097945
+Wald-Stats      -30.740913      -28.748637      -28.225437       27.565978
+P-value                0.0             0.0             0.0             0.0
+P-adj                  0.0             0.0             0.0             0.0
+Chromosome           chr3R            chrX           chr3R            chrX
+Start             24141394        10780892        26869237        10778953
+End               24147490        10786958        26871995        10786907
+Strand                   +               -               -               -
+Feature     protein_coding  protein_coding  protein_coding  protein_coding
+Gene name             Kal1            sesB     BM-40-SPARC            Ant2
 
 GeneID         FBgn0029167     FBgn0039827     FBgn0035085     FBgn0034736  \
-Base mean      5430.067277      390.901782      928.263812      330.383023   
-log2(FC)         -2.105062       -3.503013       -2.414074       -3.018179   
-StdErr            0.092547         0.16003        0.115185        0.158154   
-Wald-Stats      -22.745964      -21.889756      -20.958204      -19.083791   
-P-value                0.0             0.0             0.0             0.0   
-P-adj                  0.0             0.0             0.0             0.0   
-Chromosome           chr3L           chr3R           chr2R           chr2R   
-Start             13846053        31196915        24945138        22550093   
-End               13860001        31203722        24946636        22552113   
-Strand                   +               +               +               +   
-Feature     protein_coding  protein_coding  protein_coding  protein_coding   
-Gene name              Hml          CG1544          CG3770          CG6018   
+Base mean      5430.067277      390.901782      928.263812      330.383023
+log2(FC)         -2.105062       -3.503013       -2.414074       -3.018179
+StdErr            0.092547         0.16003        0.115185        0.158154
+Wald-Stats      -22.745964      -21.889756      -20.958204      -19.083791
+P-value                0.0             0.0             0.0             0.0
+P-adj                  0.0             0.0             0.0             0.0
+Chromosome           chr3L           chr3R           chr2R           chr2R
+Start             13846053        31196915        24945138        22550093
+End               13860001        31203722        24946636        22552113
+Strand                   +               +               +               +
+Feature     protein_coding  protein_coding  protein_coding  protein_coding
+Gene name              Hml          CG1544          CG3770          CG6018
 
 GeneID     FBgn0264475     FBgn0000071  ...     FBgn0264343     FBgn0038237  \
-Base mean   955.454454      468.057926  ...       57.156629       43.409588   
-log2(FC)     -2.334486        2.360017  ...        1.036055       -1.105893   
-StdErr         0.12423        0.135644  ...        0.216472        0.232871   
-Wald-Stats  -18.791643       17.398617  ...        4.786091       -4.748945   
-P-value            0.0             0.0  ...        0.000002        0.000002   
-P-adj              0.0             0.0  ...        0.000042        0.000049   
-Chromosome       chr3L           chr3R  ...           chr2L           chr3R   
-Start           820758         6762592  ...         7227733        14513900   
-End             821512         6765261  ...         7228641        14558304   
-Strand               +               +  ...               +               -   
-Feature        lincRNA  protein_coding  ...  protein_coding  protein_coding   
-Gene name      CR43883             Ama  ...         CG43799            Pde6   
+Base mean   955.454454      468.057926  ...       57.156629       43.409588
+log2(FC)     -2.334486        2.360017  ...        1.036055       -1.105893
+StdErr         0.12423        0.135644  ...        0.216472        0.232871
+Wald-Stats  -18.791643       17.398617  ...        4.786091       -4.748945
+P-value            0.0             0.0  ...        0.000002        0.000002
+P-adj              0.0             0.0  ...        0.000042        0.000049
+Chromosome       chr3L           chr3R  ...           chr2L           chr3R
+Start           820758         6762592  ...         7227733        14513900
+End             821512         6765261  ...         7228641        14558304
+Strand               +               +  ...               +               -
+Feature        lincRNA  protein_coding  ...  protein_coding  protein_coding
+Gene name      CR43883             Ama  ...         CG43799            Pde6
 
 GeneID         FBgn0020376     FBgn0028939     FBgn0036560     FBgn0035710  \
-Base mean         61.54154       31.587685       27.714241       26.161771   
-log2(FC)         -1.038158       -1.091024           1.089        1.048979   
-StdErr            0.219867        0.232324        0.232753        0.232922   
-Wald-Stats       -4.721761       -4.696136        4.678786        4.503559   
-P-value           0.000002        0.000003        0.000003        0.000007   
-P-adj             0.000055        0.000062        0.000067        0.000144   
-Chromosome           chr2L           chr2L           chr3L           chr3L   
-Start              4120342        13980125        16035484         6689326   
-End                4121627        13983269        16037227         6703521   
-Strand                   +               +               +               -   
-Feature     protein_coding  protein_coding  protein_coding  protein_coding   
-Gene name          Sr-CIII           NimC2          CG5895          SP1173   
+Base mean         61.54154       31.587685       27.714241       26.161771
+log2(FC)         -1.038158       -1.091024           1.089        1.048979
+StdErr            0.219867        0.232324        0.232753        0.232922
+Wald-Stats       -4.721761       -4.696136        4.678786        4.503559
+P-value           0.000002        0.000003        0.000003        0.000007
+P-adj             0.000055        0.000062        0.000067        0.000144
+Chromosome           chr2L           chr2L           chr3L           chr3L
+Start              4120342        13980125        16035484         6689326
+End                4121627        13983269        16037227         6703521
+Strand                   +               +               +               -
+Feature     protein_coding  protein_coding  protein_coding  protein_coding
+Gene name          Sr-CIII           NimC2          CG5895          SP1173
 
-GeneID         FBgn0035523     FBgn0038261     FBgn0039178     FBgn0034636  
-Base mean        70.998197       44.270577       23.550056       24.770519  
-log2(FC)          1.004819        1.006264        1.040917       -1.028531  
-StdErr            0.223763        0.224124        0.232626        0.232168  
-Wald-Stats        4.490561        4.489756        4.474631       -4.430118  
-P-value           0.000007        0.000007        0.000008        0.000009  
-P-adj             0.000152        0.000153        0.000163        0.000195  
-Chromosome           chr3L           chr3R           chr3R           chr2R  
-Start              4277961        14798985        24283954        21560245  
-End                4281585        14801163        24288617        21576035  
-Strand                   +               +               +               -  
-Feature     protein_coding  protein_coding  protein_coding  protein_coding  
-Gene name           CG1311         CG14856          CG6356         CG10440  
+GeneID         FBgn0035523     FBgn0038261     FBgn0039178     FBgn0034636
+Base mean        70.998197       44.270577       23.550056       24.770519
+log2(FC)          1.004819        1.006264        1.040917       -1.028531
+StdErr            0.223763        0.224124        0.232626        0.232168
+Wald-Stats        4.490561        4.489756        4.474631       -4.430118
+P-value           0.000007        0.000007        0.000008        0.000009
+P-adj             0.000152        0.000153        0.000163        0.000195
+Chromosome           chr3L           chr3R           chr3R           chr2R
+Start              4277961        14798985        24283954        21560245
+End                4281585        14801163        24288617        21576035
+Strand                   +               +               +               -
+Feature     protein_coding  protein_coding  protein_coding  protein_coding
+Gene name           CG1311         CG14856          CG6356         CG10440
 
 [12 rows x 130 columns]
 ```
@@ -1928,43 +1925,43 @@ print(data.describe(include='all'))
 ```
 ```output
            Base mean    log2(FC)      StdErr  Wald-Stats        P-value  \
-count     130.000000  130.000000  130.000000  130.000000   1.300000e+02   
-unique           NaN         NaN         NaN         NaN            NaN   
-top              NaN         NaN         NaN         NaN            NaN   
-freq             NaN         NaN         NaN         NaN            NaN   
-mean     1911.266780   -0.207426    0.164324   -1.901479   4.200552e-07   
-std      6888.074171    1.612615    0.042358   11.037352   1.531253e-06   
-min        19.150759   -4.148450    0.084327  -30.740913  1.617357e-207   
-25%       100.286324   -1.336283    0.128488  -10.004594   4.952408e-31   
-50%       237.986359   -1.027150    0.163704   -4.981688   2.109219e-19   
-75%       948.656793    1.220304    0.198655    7.692073   6.731953e-12   
-max     65114.840564    2.699939    0.232922   27.565978   9.418135e-06   
+count     130.000000  130.000000  130.000000  130.000000   1.300000e+02
+unique           NaN         NaN         NaN         NaN            NaN
+top              NaN         NaN         NaN         NaN            NaN
+freq             NaN         NaN         NaN         NaN            NaN
+mean     1911.266780   -0.207426    0.164324   -1.901479   4.200552e-07
+std      6888.074171    1.612615    0.042358   11.037352   1.531253e-06
+min        19.150759   -4.148450    0.084327  -30.740913  1.617357e-207
+25%       100.286324   -1.336283    0.128488  -10.004594   4.952408e-31
+50%       237.986359   -1.027150    0.163704   -4.981688   2.109219e-19
+75%       948.656793    1.220304    0.198655    7.692073   6.731953e-12
+max     65114.840564    2.699939    0.232922   27.565978   9.418135e-06
 
                 P-adj Chromosome         Start           End Strand  \
-count    1.300000e+02        130  1.300000e+02  1.300000e+02    130   
-unique            NaN          5           NaN           NaN      2   
-top               NaN      chr3R           NaN           NaN      +   
-freq              NaN         32           NaN           NaN     72   
-mean     9.321175e-06        NaN  1.343684e+07  1.344644e+07    NaN   
-std      3.278527e-05        NaN  7.970664e+06  7.973420e+06    NaN   
-min     1.387207e-203        NaN  1.274480e+05  1.403400e+05    NaN   
-25%      1.275950e-28        NaN  7.277516e+06  7.279063e+06    NaN   
-50%      2.563262e-17        NaN  1.316155e+07  1.316625e+07    NaN   
-75%      3.706020e-10        NaN  1.925043e+07  1.928464e+07    NaN   
-max      1.951192e-04        NaN  3.119692e+07  3.120372e+07    NaN   
+count    1.300000e+02        130  1.300000e+02  1.300000e+02    130
+unique            NaN          5           NaN           NaN      2
+top               NaN      chr3R           NaN           NaN      +
+freq              NaN         32           NaN           NaN     72
+mean     9.321175e-06        NaN  1.343684e+07  1.344644e+07    NaN
+std      3.278527e-05        NaN  7.970664e+06  7.973420e+06    NaN
+min     1.387207e-203        NaN  1.274480e+05  1.403400e+05    NaN
+25%      1.275950e-28        NaN  7.277516e+06  7.279063e+06    NaN
+50%      2.563262e-17        NaN  1.316155e+07  1.316625e+07    NaN
+75%      3.706020e-10        NaN  1.925043e+07  1.928464e+07    NaN
+max      1.951192e-04        NaN  3.119692e+07  3.120372e+07    NaN
 
-               Feature Gene name  
-count              130       130  
-unique               3       130  
-top     protein_coding      Sesn  
-freq               126         1  
-mean               NaN       NaN  
-std                NaN       NaN  
-min                NaN       NaN  
-25%                NaN       NaN  
-50%                NaN       NaN  
-75%                NaN       NaN  
-max                NaN       NaN  
+               Feature Gene name
+count              130       130
+unique               3       130
+top     protein_coding      Sesn
+freq               126         1
+mean               NaN       NaN
+std                NaN       NaN
+min                NaN       NaN
+25%                NaN       NaN
+50%                NaN       NaN
+75%                NaN       NaN
+max                NaN       NaN
 ```
 
 
@@ -1974,7 +1971,7 @@ max                NaN       NaN
 1. After reading the data, use `help(data.head)` and `help(data.tail)` to find out what `DataFrame.head` and `DataFrame.tail` do.
    a. What method call will display the first three rows of the data?
    b. What method call will display the last three columns of this data? (Hint: you may need to change your view of the data.)
-   
+
 2. As well as the `read_csv` function for reading data from a file, Pandas provides a `to_csv` function to write dataframes to files. Applying what you’ve learned about reading from files, write one of your dataframes to a file called `processed.csv`. You can use `help` to get information on how to use `to_csv`.
 
 ### Solutions
@@ -1986,7 +1983,7 @@ max                NaN       NaN
     ```
 
 |  | Base mean | log2(FC) | StdErr | Wald-Stats | P-value | P-adj | Chromosome | Start | End | Strand | Feature | Gene name | GeneID |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | 
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | FBgn0039155 | 1086.974295 | -4.148450 | 0.134949 | -30.740913 | 1.617357e-207 | 1.387207e-203 | chr3R | 24141394 | 24147490 | + | protein_coding | Kal1 |
 | FBgn0003360 | 6409.577128 | -2.999777 | 0.104345 | -28.748637 | 9.419922e-182 | 4.039734e-178 | chrX | 10780892 | 10786958 | - | protein_coding | sesB |
 | FBgn0026562 | 65114.840564 | -2.380164 | 0.084327 | -28.225437 | 2.850430e-175 | 8.149380e-172 | chr3R | 26869237 | 26871995 | - | protein_coding | BM-40-SPARC |
@@ -2001,8 +1998,8 @@ max                NaN       NaN
     data_flipped.tail(n=3)
 
 | GeneID | FBgn0039155 | FBgn0003360 | FBgn0026562 | FBgn0025111 | FBgn0029167 | FBgn0039827 | FBgn0035085 | FBgn0034736 | FBgn0264475 | FBgn0000071 | ... | FBgn0264343 | FBgn0038237 | FBgn0020376 | FBgn0028939 | FBgn0036560 | FBgn0035710 | FBgn0035523 | FBgn0038261 | FBgn0039178 | FBgn0034636 |
-| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | 
-| Strand | + | - | - | - | + | + | + | + | + | + | ... | + | - | + | + | + | - | + | + | + | - | 
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| Strand | + | - | - | - | + | + | + | + | + | + | ... | + | - | + | + | + | - | + | + | + | - |
 | Feature | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | lincRNA | protein_coding | ... | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding | protein_coding |
 | Gene name | Kal1 | sesB | BM-40-SPARC | Ant2 | Hml | CG1544 | CG3770 | CG6018 | CR43883 | Ama | ... | CG43799 | Pde6 | Sr-CIII | NimC2 | CG5895 | SP1173 | CG1311 | CG14856 | CG6356 | CG10440 |
 
@@ -2051,7 +2048,7 @@ End                 24147490
 Strand                     +
 Feature       protein_coding
 Gene name               Kal1
-Name: FBgn0039155, dtype: object 
+Name: FBgn0039155, dtype: object
 ```
 Which would get the same result as printing `data.loc["FBgn0039155"]` (without a second index).
 
@@ -2063,14 +2060,14 @@ print(data.iloc[1:4 , 0:3])
 ```
 ```output
                 Base mean  log2(FC)    StdErr  Wald-Stats
-GeneID                                                   
+GeneID
 FBgn0003360   6409.577128 -2.999777  0.104345  -28.748637
 FBgn0026562  65114.840564 -2.380164  0.084327  -28.225437
 FBgn0025111   2192.322369  2.699939  0.097945   27.565978
 FBgn0029167   5430.067277 -2.105062  0.092547  -22.745964
 
                 Base mean  log2(FC)    StdErr
-GeneID                                       
+GeneID
 FBgn0003360   6409.577128 -2.999777  0.104345
 FBgn0026562  65114.840564 -2.380164  0.084327
 FBgn0025111   2192.322369  2.699939  0.097945
@@ -2103,7 +2100,7 @@ print(subset)
 ```
 ```output
                      P-adj    Gene name
-GeneID                                 
+GeneID
 FBgn0039155  1.387207e-203         Kal1
 FBgn0003360  4.039734e-178         sesB
 FBgn0026562  8.149380e-172  BM-40-SPARC
@@ -2126,7 +2123,7 @@ print(new_data)
 ```output
 
                      P-adj    Gene name
-GeneID                                 
+GeneID
 FBgn0039155  1.387207e-203         Kal1
 FBgn0003360  4.039734e-178         sesB
 FBgn0026562  8.149380e-172  BM-40-SPARC
@@ -2142,9 +2139,9 @@ FBgn0025836   1.071884e-06     RhoGAP1A
 [113 rows x 2 columns]
 ```
 
-If we have not had specified the column, that the expression should be applied to, then it would have been applied to the entire dataframe. But the dataframe contains different type of data. In that case, an error would occur. 
+If we have not had specified the column, that the expression should be applied to, then it would have been applied to the entire dataframe. But the dataframe contains different type of data. In that case, an error would occur.
 
-Consider the following example of a dataframe consisting only of numerical data. The expression and the mask would be normally applied to the data and the mask would return `NaN` for the data that don't comply with the expression. 
+Consider the following example of a dataframe consisting only of numerical data. The expression and the mask would be normally applied to the data and the mask would return `NaN` for the data that don't comply with the expression.
 
 ```python
 subset = data.loc[:, ['StdErr',	'Wald-Stats', 'P-value', 'P-adj']]
@@ -2154,7 +2151,7 @@ print(new_data)
 ```
 ```output
              StdErr  Wald-Stats        P-value          P-adj
-GeneID                                                       
+GeneID
 FBgn0039155     NaN  -30.740913  1.617357e-207  1.387207e-203
 FBgn0003360     NaN  -28.748637  9.419922e-182  4.039734e-178
 FBgn0026562     NaN  -28.225437  2.850430e-175  8.149380e-172
@@ -2200,10 +2197,10 @@ max       NaN   -4.430118   9.418135e-06   1.951192e-04
 
     ```python
     data = pd.read_csv("https://zenodo.org/record/3477564/files/annotatedDEgenes.tabular", sep = "\t", index_col = 'GeneID')
-    
+
     print(data['Base mean'].idxmin())
     print(data['Base mean'].idxmax())
-    
+
     ```
 3. Assume Pandas has been imported and the previous dataset has been loaded. Write an expression to select each of the following:
 
@@ -2222,7 +2219,7 @@ max       NaN   -4.430118   9.418135e-06   1.951192e-04
     ```python
     second = first[first['log2(FC)'] > 0 ]
     ```
-    This line makes a selection: only those rows of first for which the ‘log2(FC)’ column contains a positive value are extracted. Notice how the Boolean expression inside the brackets is used to select only those rows where the expression is true. 
+    This line makes a selection: only those rows of first for which the ‘log2(FC)’ column contains a positive value are extracted. Notice how the Boolean expression inside the brackets is used to select only those rows where the expression is true.
 
     ```python
     third = second.drop('FBgn0025111')
@@ -2247,8 +2244,8 @@ max       NaN   -4.430118   9.418135e-06   1.951192e-04
     FBgn0063667
     FBgn0026562
 	```
-3. 
-    a. 
+3.
+    a.
 
     ```python
      data['P-value']
@@ -2257,7 +2254,7 @@ max       NaN   -4.430118   9.418135e-06   1.951192e-04
     ```python
        data.loc['FBgn0039178', :]
     ```
-    c. 
+    c.
     ```python
        data[data['Chromosome'] == 'chr3R']
     ```
@@ -2269,13 +2266,13 @@ Many data analysis tasks can be approached using the “split-apply-combine” p
 Pandas makes this very easy through the use of the `groupby()` method, which splits the data into groups. When the data is grouped in this way, the aggregate method `agg()` can be used to apply an aggregating or summary function to each group.
 
 ```python
-summarised_data = data.groupby('Chromosome').agg({'Base mean':'first', 
+summarised_data = data.groupby('Chromosome').agg({'Base mean':'first',
                              'log2(FC)': 'max'})
 print(summarised_data)
 ```
 ```output
               Base mean  log2(FC)
-Chromosome                       
+Chromosome
 chr2L       1269.362573  2.145440
 chr2R        928.263812  2.407986
 chr3L       5430.067277  2.428607
@@ -2286,8 +2283,8 @@ chrX        6409.577128  2.699939
 There are a couple of things that should be noted. The `agg()` method accepts a dictionary as input that specifies the function to be applied to each column. The output is a new dataframe, that each row corresponds to one group. The output dataframe uses the grouping column as index. We could change the last one by simply using the `reset_index()` method.
 
 ```python
-summarised_data = data.groupby('Chromosome').agg({'Base mean':'first', 
-                                                  'log2(FC)': 'max'}).reset_index() 
+summarised_data = data.groupby('Chromosome').agg({'Base mean':'first',
+                                                  'log2(FC)': 'max'}).reset_index()
 print(summarised_data)
 ```
 ```output
@@ -2305,10 +2302,10 @@ print(summarised_data)
 
 
 ### Solutions
-1. 
+1.
     ```python
     data = pd.read_csv("https://zenodo.org/record/3477564/files/annotatedDEgenes.tabular", sep = "\t", index_col = 'GeneID')
-    
+
     data['Gene Length'] = data['End'] - data['Start']
     data.groupby('Chromosome').agg(max_length = ('Gene Length', 'max'))
     ```
@@ -2326,7 +2323,7 @@ print(summarised_data)
 ```python
 import matplotlib.pyplot as plt
 ```
-Simple plots are then (fairly) simple to create. You can use the `plot()` method and simply specify the data to be displayed in the x and y axis, by passing the data as the first and second argument. In the following example, we select a subset of the dataset and plot the P-value of each gene, using a lineplot. At the 
+Simple plots are then (fairly) simple to create. You can use the `plot()` method and simply specify the data to be displayed in the x and y axis, by passing the data as the first and second argument. In the following example, we select a subset of the dataset and plot the P-value of each gene, using a lineplot. At the
 
 ```python
 subset = data.iloc[121:, :]
@@ -2367,7 +2364,7 @@ subset = data.iloc[121:, :]
 x = subset['P-value']
 y = subset['Gene name']
 
-fig = plt.gcf() 
+fig = plt.gcf()
 plt.plot(x, y)
 fig.savefig('my_figure.png')
 ```
@@ -2389,7 +2386,7 @@ plt.xlabel('Gene name')
 
 In this example, we select a new subset of the dataset, but plot only the two columns `P-value` and `P-adj`. Then we use the `plt.xticks()` method to change the text and the rotation of the x axis.
 
-Another useful plot type is the barplot. In the following example we plot the number of genes that belong to the different chromosomes of the dataset. 
+Another useful plot type is the barplot. In the following example we plot the number of genes that belong to the different chromosomes of the dataset.
 
 ```python
 bar_data = data.groupby('Chromosome').size()
@@ -2410,7 +2407,7 @@ plt.ylabel('N')
 ```
 ![Figure12](../../images/python-basics/Figure12_ggplot_Barplot.png)
 
-You can also change different parameters and customize the plot. 
+You can also change different parameters and customize the plot.
 
 ```python
 plt.style.use('default')
@@ -2436,14 +2433,14 @@ plt.xlabel('Gene name')
 ![Figure14](../../images/python-basics/Figure14_Scatterplot.png)
 
 ### Exercise
-1. Using the same dataset, create a scatterplot of the average P-value for every chromosome for the "+" and the "-" strand. 
+1. Using the same dataset, create a scatterplot of the average P-value for every chromosome for the "+" and the "-" strand.
 
 ### Solution
 1. First find the data and save it in a new dataframe. Then create the scatterplot. You can even go one step further and assign different colors for the different strands.Note the use of the `map` method that assigns the different colors using a dictionary as an input.
 
     ```python
     exercise_data = data.groupby(['Chromosome', 'Strand']).agg(mean_pvalue = ('P-value', 'mean')).reset_index()
-    
+
     colors = {'+':'red', '-':'blue'}
     plt.scatter(x = exercise_data['Chromosome'], y = exercise_data['mean_pvalue'], c = exercise_data['Strand'].map(colors))
     plt.ylabel('Average P-value')
@@ -2492,7 +2489,7 @@ Python supports a large and diverse community across academia and industry.
 
 ![Figure16_Closing_Jupyter](../../images/python-basics/Figure16_Closing_Jupyter.png)
 
-If you want to run this notebook again, or share it with others, it now exists in your history. 
+If you want to run this notebook again, or share it with others, it now exists in your history.
 
 
 
